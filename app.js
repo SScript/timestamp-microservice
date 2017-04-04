@@ -3,7 +3,9 @@
     var port = Number(process.env.PORT||8080);
 
     app.get('/', function(req, res) {
-      res.send('Hello world!')
+      res.send('<h1>Timestamp Microservice</h1><br>'+
+      '<a href="http://timestamp-polymorph.herokuapp.com/December%2015,%202015">http://timestamp-polymorph.herokuapp.com/December%2015,%202015</a>'+
+      '<a href="http://timestamp-polymorph.herokuapp.com/1450137600">http://timestamp-polymorph.herokuapp.com/1450137600</a>')
     })
 
     app.get('/:time', function(req, res) {
