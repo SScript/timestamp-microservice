@@ -1,5 +1,6 @@
     var express = require('express')
     var app = express()
+    var port = Number(process.env.PORT||8080);
 
     app.get('/', function(req, res) {
       res.send('Hello world!')
@@ -41,7 +42,7 @@
 
     })
 
-    app.listen(80, function(err, success) {
+    app.listen(port, function(err, success) {
       if (err) return err;
       console.log("Connected to port 3000");
     });
